@@ -1,2 +1,85 @@
-@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Unlock&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Wet+Paint&family=Teko:wght@300..700&display=swap');
 
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --fonte-principal: "Rubik Wet Paint", system-ui;
+    --fonte-secundario: "Teko", sans-serif;
+    --timberwolf: #dad7cdff;
+    --sage: rgb(206, 216, 189);
+    --fern-green: #588157ff;
+    --hunter-green: #3a5a40ff;
+    --brunswick-green: #344e41ff;
+    --preto-basico: #000000ff;
+    --branco-basico: #ffffff;
+}
+
+body{
+    font-family: var(--fonte-principal);
+    background-color: var(--sage);
+    color: var(--branco-basico);
+
+}
+
+header {
+    background-color: #007bff; 
+    width: 100%; 
+    padding: 20px; 
+    color: white; 
+    text-align: center; 
+}
+
+
+nav {
+    margin: 20px 0; 
+}
+
+
+ul {
+    list-style-type: none; 
+    display: flex; 
+    justify-content: center; 
+}
+
+/* Estilo dos links */
+a {
+    text-decoration: none; 
+    color: #007bff; 
+    font-weight: bold; 
+    padding: 10px 15px; 
+    border-radius: 5px; 
+    transition: background-color 0.3s, color 0.3s; 
+}
+
+
+a:hover {
+    background-color: #0056b3; 
+    color: white; 
+}
+
+
+main {
+    max-width: 800px; 
+    padding: 20px; 
+}
+
+
+section {
+    margin: 20px 0; 
+    padding: 15px; 
+    background-color: white; 
+    border-radius: 5px; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+}
+
+
+footer {
+    margin-top: auto; 
+    padding: 10px; 
+    text-align: center; 
+    background-color: #007bff; 
+    color: white; 
+}
