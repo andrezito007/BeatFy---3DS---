@@ -48,72 +48,66 @@ header {
 h1 {
     font-family: var(--fonte-principal); 
     margin-bottom: 15px; 
-    color: var(--branco-basico); /* Define a cor do título */
+    color: var(--branco-basico); 
 }
 
-/* Container de Navegação */
 nav {
     margin-top: 30px;
     display: flex;
-    justify-content: center; /* Centraliza os itens de navegação horizontalmente */
+    justify-content: center; 
 }
 
-/* Lista sem estilo */
 ul {
     list-style-type: none;
-    display: flex; /* Alinha os itens da lista horizontalmente */
-    gap: 20px; /* Espaço entre os itens de navegação */
-    padding: 0; /* Remove o padding padrão da lista */
-    margin: 0; /* Remove a margem da lista */
+    display: flex; 
+    gap: 20px; 
+    padding: 0;
+    margin: 0; 
 }
 
-/* Estilo dos Links da Navegação */
 nav a {
     display: inline-block;
     padding: 15px 30px;
-    background-color: var(--fern-green); /* Cor de fundo do botão */
-    color: var(--branco-basico); /* Cor do texto */
-    text-decoration: none; /* Remove o sublinhado dos links */
-    font-weight: bold; /* Texto em negrito */
+    background-color: var(--fern-green); 
+    color: var(--branco-basico); 
+    text-decoration: none; 
+    font-weight: bold; 
     font-size: 18px;
-    text-transform: uppercase; /* Deixa o texto todo em maiúsculo */
-    letter-spacing: 1px; /* Aumenta o espaçamento entre as letras */
-    border-radius: 30px; /* Bordas arredondadas */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
-    transition: all 0.3s ease; /* Transição suave para todas as mudanças */
-    cursor: pointer; /* Aparece como ponteiro de clique */
+    text-transform: uppercase; 
+    letter-spacing: 1px;
+    border-radius: 30px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    transition: all 0.3s ease; 
+    cursor: pointer;
 }
 
-/* Efeito Hover nos Links */
 nav a:hover {
-    background-color: var(--hunter-green); /* Muda a cor ao passar o mouse */
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Aumenta a sombra no hover */
-    transform: translateY(-5px); /* Faz o botão "subir" um pouco */
+    background-color: var(--hunter-green); 
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); 
+    transform: translateY(-5px); 
 }
 
-/* Efeito de Foco (quando o link é clicado ou selecionado) */
 nav a:focus {
-    outline: none; /* Remove o contorno padrão ao clicar */
-    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.2); /* Sombra de foco mais forte */
+    outline: none; 
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.2); 
 }
 
-/* Efeito de Atividade (quando o botão é clicado) */
 nav a:active {
-    transform: translateY(0); /* Anula o efeito de "subir" ao clicar */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra mais suave ao ser pressionado */
+    transform: translateY(0); 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-/* Responsividade para telas menores */
+
 @media (max-width: 600px) {
     nav a {
-        padding: 12px 25px; /* Ajusta o tamanho do botão para telas pequenas */
-        font-size: 16px; /* Tamanho da fonte menor */
+        padding: 12px 25px;
+        font-size: 16px; 
     }
 }
 
 @media (min-width: 601px) and (max-width: 900px) {
     nav a {
-        padding: 13px 27px; /* Ajuste do tamanho do botão para telas médias */
+        padding: 13px 27px;
     }
 }
 
@@ -253,4 +247,77 @@ footer {
 h3 {
     margin: 10px 0;
     color: var(--brunswick-green); 
+}
+
+.carrossel-container {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.carrossel-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    object-position: center;
+    image-rendering: crisp-edges; 
+}
+
+.carrossel {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carrossel-item {
+    min-width: 100%; 
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.carrossel-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.carrossel-container button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 10;
+    transition: background-color 0.3s ease;
+}
+
+.carrossel-container .prev-btn {
+    left: 10px;
+}
+
+.carrossel-container .next-btn {
+    right: 10px;
+}
+
+.carrossel-container button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+h2 {
+    font-family: var(--fonte-principal);
+    color: var(--preto-basico);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+    .carrossel-item {
+        min-width: 80%; 
+    }
 }
