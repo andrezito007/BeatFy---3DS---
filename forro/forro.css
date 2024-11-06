@@ -1,73 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Wet+Paint&family=Teko:wght@300..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --fonte-principal: "Rubik Wet Paint", system-ui;
+    --fonte-secundario: "Teko", sans-serif;
+    --timberwolf: #dad7cdff;
+    --sage: rgb(206, 216, 189);
+    --fern-green: #588157ff;
+    --hunter-green: #3a5a40ff;
+    --brunswick-green: #344e41ff;
+    --preto-basico: #000000ff;
+    --branco-basico: #ffffff;
+}
+
 body {
     font-family: 'Arial', sans-serif;
     margin: 20px;
-    background-color: #f9f9f9;
-    color: #333;
+    background-color: var(--timberwolf);
+    color: var(--hunter-green);
 }
 
 header {
-    background-color: #4a9cc1;
+    background-color: var(--fern-green);
     padding: 20px;
     border-radius: 8px;
-    color: white;
+    color: var(--branco-basico);
 }
 
 h1 {
-    color: #ffffff;
+    color: var(--branco-basico);
     text-align: center;
+    font-family: var(--fonte-principal);
+    font-size: 2.5em;
 }
 
 h2 {
-    color: #5a5a5a;
+    color: var(--brunswick-green);
     margin-top: 20px;
+    font-family: var(--fonte-secundario);
+    font-weight: 700;
 }
 
+/* Carrossel de Imagens */
+.carrossel {
+    position: relative;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.carousel-container {
+    position: relative;
+    max-width: 800px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-item {
+    min-width: 100%;
+    transition: transform 0.5s ease;
+}
+
+.carousel-item img {
+    width: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.carousel-item p {
+    font-family: var(--fonte-secundario);
+    font-size: 1.2em;
+    color: var(--hunter-green);
+    margin-top: 10px;
+}
+
+button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 2em;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+button.prev {
+    left: 10px;
+}
+
+button.next {
+    right: 10px;
+}
+
+button:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Cantores Section */
 .cantores {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px; /* Espaçamento entre os quadrados */
-    justify-content: center; /* Centraliza os artigos */
+    gap: 20px;
+    justify-content: center;
     margin-top: 30px;
 }
 
 article {
-    background-color: #ffffff;
+    background-color: var(--branco-basico);
     border: 1px solid #e0e0e0;
     border-radius: 8px;
     padding: 15px;
-    width: 300px; /* Largura fixa para o artigo */
+    width: 300px;
     transition: transform 0.2s;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: var(--sage); /* Fundo mais suave para os artigos */
 }
 
 article:hover {
-    transform: scale(1.02);
+    transform: scale(1.05);
+    background-color: var(--hunter-green); /* Alterando para um verde escuro no hover */
+    color: var(--branco-basico); /* Mudando o texto para branco quando em hover */
 }
 
 iframe {
-    width: 100%; /* Largura total do artigo */
-    height: 200px; /* Altura fixa para os vídeos */
-    border: none; /* Remove bordas do iframe */
-    margin-top: 15px; /* Espaço acima do vídeo */
+    width: 100%;
+    height: 200px;
+    border: none;
+    margin-top: 15px;
 }
 
 .button {
     display: inline-block;
-    background-color: #4a9cc1;
-    color: white;
+    background-color: var(--fern-green); /* Cor de botão mais forte */
+    color: var(--branco-basico);
     padding: 10px 15px;
     border-radius: 5px;
     text-decoration: none;
     margin-top: 10px;
+    font-family: var(--fonte-secundario);
+    transition: background-color 0.3s ease;
 }
 
 .button:hover {
-    background-color: #3b8ca0;
+    background-color: var(--hunter-green); /* Escurecendo o botão no hover */
 }
 
 footer {
     text-align: center;
     margin-top: 40px;
     font-size: 0.9em;
-    color: #666;
+    color: var(--brunswick-green); /* Usando uma cor mais suave para o rodapé */
+    font-family: var(--fonte-secundario);
 }
