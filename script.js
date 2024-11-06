@@ -3,8 +3,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
     carrosselContainers.forEach(container => {
         const carrossel = container.querySelector('.carrossel');
-        const prevButton = container.querySelector('.prev-btn');
-        const nextButton = container.querySelector('.next-btn');
         const totalItems = carrossel.children.length;
         let currentIndex = 0;
 
@@ -17,7 +15,10 @@ document.addEventListener("DOMContentLoaded", function() {
             carrossel.style.transform = `translateX(${newTransformValue}%)`;
         }
 
-        prevButton.addEventListener('click', () => moveCarrossel(-1));
-        nextButton.addEventListener('click', () => moveCarrossel(1));
+        
+        setInterval(() => {
+            moveCarrossel(1); 
+        }, 3000);
+
     });
 });

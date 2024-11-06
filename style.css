@@ -27,15 +27,44 @@ body {
 }
 
 .logo {
-    width: 50px; 
-    height: 50px; 
-    border-radius: 50%; 
-    margin-right: 10px; 
-    position: absolute; 
-    top: 10px; 
-    left: 10px; 
-    object-fit: cover; 
+    width: 80px;          
+    height: 80px;         
+    border-radius: 50%;   
+    position: absolute;      
+    top: 15px;            
+    left: 15px;           
+    object-fit: cover;    
+    z-index: 10;          
 }
+
+@media (max-width: 1024px) {
+    .logo {
+        width: 70px;      
+        height: 70px;     
+        top: 10px;        
+        left: 10px;       
+    }
+}
+
+@media (max-width: 768px) {
+    .logo {
+        width: 60px;      
+        height: 60px;     
+        top: 10px;       
+        left: 10px;      
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        width: 50px;      
+        height: 50px;     
+        top: 10px;       
+        left: 10px;      
+    }
+}
+
+
 
 header {
     background-color: var(--hunter-green); 
@@ -146,6 +175,7 @@ footer {
     text-align: center; 
     background-color: var(--hunter-green); 
     color: white; 
+    width: 100%;
 }
 
 .artista-container {
@@ -166,7 +196,13 @@ footer {
     border-radius: 10px; 
     margin: 10px;
     border: 2px solid white; 
+    transition: transform 0.3s ease;
 }
+
+.artista-img:hover {
+    transform: scale(1.05);
+}
+
 
 @media (max-width: 600px) {
     header, nav, footer {
@@ -252,7 +288,7 @@ h3 {
 .carrossel-container {
     position: relative;
     width: 100%;
-    max-width: 400px;
+    max-width: 600px;       
     margin: 0 auto;
     overflow: hidden;
 }
@@ -260,9 +296,9 @@ h3 {
 .carrossel-container img {
     width: 100%;
     height: 100%;
-    object-fit: cover; 
+    object-fit: cover;
     object-position: center;
-    image-rendering: crisp-edges; 
+    image-rendering: crisp-edges;
 }
 
 .carrossel {
@@ -309,6 +345,41 @@ h3 {
     background-color: rgba(0, 0, 0, 0.8);
 }
 
+
+@media (max-width: 1024px) {
+    .carrossel-container {
+        max-width: 80%; 
+    }
+
+    .carrossel-container button {
+        padding: 12px;  
+        font-size: 20px; 
+    }
+}
+
+@media (max-width: 768px) {
+    .carrossel-container {
+        max-width: 90%;
+    }
+
+    .carrossel-container button {
+        padding: 10px;  
+        font-size: 18px; 
+    }
+}
+
+@media (max-width: 480px) {
+    .carrossel-container {
+        max-width: 95%;
+    }
+
+    .carrossel-container button {
+        padding: 8px;   
+        font-size: 16px; 
+    }
+}
+
+
 h2 {
     font-family: var(--fonte-principal);
     color: var(--preto-basico);
@@ -319,5 +390,71 @@ h2 {
 @media (max-width: 600px) {
     .carrossel-item {
         min-width: 80%; 
+    }
+}
+
+.influencias-musicais {
+    background-color: var(--branco-basico); 
+    padding: 40px 20px;
+    text-align: center;
+    color: var(--preto-basico); 
+    font-family: var(--fonte-secundario);
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin: 40px 0;
+}
+
+.influencias-musicais .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.titulo {
+    font-family: var(--fonte-principal);
+    color: var(--preto-basico); 
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.descricao {
+    font-size: 1.2rem;
+    color: var(--brunswick-green);
+    line-height: 1.6;
+    margin-bottom: 30px;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.imagem-container {
+    margin-top: 30px;
+}
+
+.influencias-img {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.influencias-img:hover {
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .titulo {
+        font-size: 2rem;
+    }
+
+    .descricao {
+        font-size: 1rem;
+    }
+
+    .influencias-img {
+        max-width: 100%;
+        margin-top: 20px;
     }
 }

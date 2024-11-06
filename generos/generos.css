@@ -3,6 +3,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box; 
 }
 
 :root {
@@ -26,8 +27,7 @@ body {
     align-items: center;
     justify-content: flex-start;
     min-height: 100vh;
-    /* Remover o padding-top para colar o header no topo */
-    padding-top: 0; 
+    padding-top: 0;
 }
 
 header {
@@ -40,13 +40,41 @@ header {
 }
 
 .logo {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    position: absolute;
-    top: 20px;
-    left: 20px; 
-    object-fit: cover;
+    width: 80px;          
+    height: 80px;         
+    border-radius: 50%;   
+    position: absolute;      
+    top: 15px;            
+    left: 15px;           
+    object-fit: cover;    
+    z-index: 10;          
+}
+
+@media (max-width: 1024px) {
+    .logo {
+        width: 70px;      
+        height: 70px;     
+        top: 10px;        
+        left: 10px;       
+    }
+}
+
+@media (max-width: 768px) {
+    .logo {
+        width: 60px;      
+        height: 60px;     
+        top: 10px;       
+        left: 10px;      
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        width: 50px;      
+        height: 50px;     
+        top: 10px;       
+        left: 10px;      
+    }
 }
 
 h1 {
@@ -149,6 +177,12 @@ main {
     height: 70%;
     object-fit: cover;
     border-bottom: 2px solid var(--brunswick-green);
+    object-position: center;
+    transition: transform 0.3s ease;
+}
+
+.genero-img:hover {
+    transform: scale(1.1);
 }
 
 h3 {
@@ -175,5 +209,25 @@ footer {
     .genero-button {
         width: 80%;
         height: auto;
+    }
+
+    .menu-btn {
+        padding: 12px 25px;
+        font-size: 16px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 900px) and (min-width: 601px) {
+    .menu-btn {
+        padding: 15px 25px;
+        font-size: 17px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
     }
 }
