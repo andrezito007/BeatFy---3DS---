@@ -431,18 +431,6 @@ h2 {
     margin-top: 30px;
 }
 
-.influencias-img {
-    width: 100%;
-    max-width: 600px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    object-fit: cover;
-    transition: transform 0.3s ease;
-}
-
-.influencias-img:hover {
-    transform: scale(1.05);
-}
 
 @media (max-width: 768px) {
     .titulo {
@@ -453,7 +441,7 @@ h2 {
         font-size: 1rem;
     }
 
-    .influencias-img {
+    .video-button {
         max-width: 100%;
         margin-top: 20px;
     }
@@ -471,3 +459,16 @@ h2 {
 .link-youtube:hover {
     text-decoration: underline;
 }
+
+.video-button {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.video-button:hover {
+    transform: scale(1.05);}
+
