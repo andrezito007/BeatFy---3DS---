@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Wet+Paint&family=Teko:wght@300..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --fonte-principal: "Rubik Wet Paint", system-ui;
+    --fonte-secundario: "Teko", sans-serif;
+    --timberwolf: #dad7cdff;
+    --sage: rgb(206, 216, 189);
+    --fern-green: #588157ff;
+    --hunter-green: #3a5a40ff;
+    --brunswick-green: #344e41ff;
+    --preto-basico: #000000ff;
+    --branco-basico: #ffffff;
+}
+
+body {
+    font-family: var(--fonte-principal), sans-serif;
+    background-color: var(--sage);
+    color: var(--preto-basico);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 3rem;
+    color: var(--hunter-green);
+}
+
+section {
+    max-width: 1000px;
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+h2 {
+    font-size: 2.5rem;
+    color: var(--brunswick-green);
+    margin-bottom: 20px;
+}
+
+
+p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    text-align: justify;
+    color: var(--preto-basico);
+}
+
+ul {
+    list-style: none;
+    margin-top: 20px;
+}
+
+.artist {
+    background-color: var(--branco-basico);
+    border: 2px solid var(--timberwolf);
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.artist:hover {
+    background-color: var(--sage);
+    transform: scale(1.05);
+}
+
+.artist iframe {
+    width: 100%;
+    height: 300px;
+    border-radius: 8px;
+}
+
+.video-container {
+    margin-top: 15px;
+}
+
+.artist p {
+    font-family: var(--fonte-secundario);
+    color: var(--hunter-green);
+    font-size: 1.1rem;
+    margin-top: 10px;
+}
+
+.artist strong {
+    font-size: 1.2rem;
+    color: var(--fern-green);
+}
+
+.artist em {
+    font-style: italic;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+    
+    h2 {
+        font-size: 2rem;
+    }
+
+    .artist iframe {
+        height: 250px;
+    }
+}
+
