@@ -25,62 +25,122 @@ body {
     font-family: var(--fonte-principal);
     line-height: 1.6;
     background-color: var(--brunswick-green);
-    color: var(--preto);
+    color: var(--preto-basico);
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
 }
 
 h1, h2 {
-    color: var(--);
+    color: var(--hunter-green);
     text-align: center;
     margin-bottom: 20px;
 }
 
+/* Container centralizado */
 .container {
     width: 90%;
-    max-width: 1200px;
-    margin: auto;
+    max-width: 800px;
+    margin: 30px auto;
     padding: 30px;
     background-color: var(--branco-basico);
     border-radius: 12px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
-.artist {
-    margin-bottom: 30px;
+/* Card de Música */
+.music-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
     padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    transition: background-color 0.3s, transform 0.3s;
+    background-color: var(--fundo-light);
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
 }
 
-.artist:hover {
-    background-color: #f0f8ff;
+.music-card:hover {
     transform: translateY(-5px);
 }
 
-.artist h3 {
-    color: var(--preto-basico);
-    font-size: 1.5em;
-    margin-bottom: 10px;
+/* Imagem da música */
+.music-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-a {
+/* Título e descrição */
+.music-card h3 {
     color: var(--preto-basico);
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+.music-card p {
+    font-size: 1em;
+    color: var(--preto-basico);
+    margin-bottom: 15px;
+}
+
+/* Botões de ação */
+.music-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.music-buttons button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: var(--branco-basico);
+    background-color: var(--azul-principal);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.music-buttons button:hover {
+    background-color: var(--azul-escuro);
+    transform: translateY(-2px);
+}
+
+/* Links */
+a {
+    color: var(--azul-principal);
     text-decoration: none;
     font-weight: bold;
+    transition: color 0.3s;
 }
 
 a:hover {
+    color: var(--azul-escuro);
     text-decoration: underline;
 }
 
+/* Barra de navegação */
 .nav {
     background-color: var(--preto-basico);
     color: var(--branco-basico);
+    width: 100%;
     padding: 15px 0;
     text-align: center;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 0;
 }
 
 .nav a {
@@ -95,4 +155,25 @@ a:hover {
 .nav a:hover {
     background-color: var(--azul-escuro);
     transform: scale(1.05);
+}
+
+/* Ajustes de responsividade */
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+    }
+
+    .nav a {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+
+    .music-card {
+        max-width: 100%;
+    }
+
+    .music-buttons button {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
 }
