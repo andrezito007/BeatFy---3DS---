@@ -458,3 +458,16 @@ h2 {
         margin-top: 20px;
     }
 }
+
+.link-youtube {
+    display: block;
+    margin-top: 10px;
+    text-align: center;
+    color: var(--preto-basico); 
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.link-youtube:hover {
+    text-decoration: underline;
+}

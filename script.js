@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function() {
         
         setInterval(() => {
             moveCarrossel(1); 
-        }, 3000);
+        }, 3500);
 
     });
 });

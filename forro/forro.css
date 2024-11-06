@@ -164,3 +164,51 @@ footer {
     color: var(--brunswick-green); /* Usando uma cor mais suave para o rodapé */
     font-family: var(--fonte-secundario);
 }
+
+.cantores {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 30px;
+    list-style-type: none; /* Remove bullet points */
+}
+
+.artist {
+    background-color: var(--branco-basico);
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 15px;
+    width: 300px;
+    transition: transform 0.2s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: var(--sage); /* Fundo mais suave para os artigos */
+}
+
+.artist:hover {
+    transform: scale(1.05);
+    background-color: var(--hunter-green); /* Alterando para um verde escuro no hover */
+    color: var(--branco-basico); /* Mudando o texto para branco quando em hover */
+}
+
+.video-container {
+    margin-top: 10px;
+}
+
+iframe {
+    width: 100%;
+    height: 200px;
+    border: none;
+}
+
+p {
+    margin-top: 10px;
+    font-family: var(--fonte-secundario);
+    font-size: 1.1em;
+    color: var(--hunter-green);
+}
+
+em {
+    font-style: italic;
+    color: var(--fern-green);
+}
