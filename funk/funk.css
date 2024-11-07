@@ -3,7 +3,6 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 :root {
@@ -22,7 +21,6 @@ body {
     font-family: var(--fonte-principal), sans-serif;
     background-color: var(--sage);
     color: var(--preto-basico);
-    padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -55,6 +53,11 @@ section {
     max-width: 1000px;
     width: 100%;
     margin-bottom: 40px;
+}
+
+.lista-musicas {
+    display: flex;
+
 }
 
 h2 {
@@ -160,4 +163,16 @@ ul {
 .menu-btn:focus {
     outline: none;
     box-shadow: 0 0 10px 2px rgba(37, 117, 252, 0.5);
+}
+
+.video-grid ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    list-style-type: none; 
+    padding: 0;
+}
+
+.video-container iframe {
+    width: 100%;
 }
