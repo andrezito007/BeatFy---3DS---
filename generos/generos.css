@@ -134,7 +134,14 @@ main {
 
 #generos-musicais h2 {
     font-family: var(--fonte-principal);
-    color: var(--hunter-green);
+    color: var(--branco-basico);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#generos-musicais h3 {
+    font-family: var(--fonte-principal);
+    color: var(--branco-basico);
     margin-bottom: 20px;
     text-align: center;
 }
@@ -143,7 +150,7 @@ main {
     text-align: center;
     margin-bottom: 30px;
     font-size: 1.1rem;
-    color: var(--brunswick-green);
+    color: var(--branco-basico);
 }
 
 .genero-container {
@@ -155,16 +162,20 @@ main {
 }
 
 .genero-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     text-decoration: none;
     width: 250px;
     height: 350px;
     border: 2px solid var(--brunswick-green);
     border-radius: 10px;
-    background-color: var(--branco-basico);
+    background-color: var(--hunter-green);
     text-align: center;
     overflow: hidden;
     transition: transform 0.3s ease;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
 }
 
 .genero-button:hover {
@@ -174,7 +185,7 @@ main {
 
 .genero-img {
     width: 100%;
-    height: 70%;
+    height: 65%;
     object-fit: cover;
     border-bottom: 2px solid var(--brunswick-green);
     object-position: center;
@@ -192,13 +203,7 @@ h3 {
     padding: 10px;
 }
 
-footer {
-    background-color: var(--hunter-green);
-    color: var(--branco-basico);
-    text-align: center;
-    padding: 15px;
-    width: 100%;
-}
+
 
 @media (max-width: 600px) {
     .genero-container {
@@ -232,4 +237,58 @@ footer {
     }
 }
 
+/* Estilos do Carrossel */
+#carrossel-cantores {
+    text-align: center;
+    margin-top: 50px;
+}
 
+#carrossel-cantores h2 {
+    font-family: var(--fonte-principal);
+    color: var(--branco-basico);
+    margin-bottom: 20px;
+}
+
+.carrossel-container {
+    overflow: hidden;
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;
+    position: relative;
+}
+
+.carrossel {
+    display: flex;
+    gap: 20px;
+    animation: slide 30s linear infinite;
+    /* Garantir largura mínima para o loop contínuo */
+    min-width: calc(100px * 10 + 200px); /* Largura de 10 imagens + espaços entre elas */
+}
+
+.carrossel-imagem {
+    width: 100px;
+    height: 100px;
+    border-radius: 60%;
+    border: 3px solid var(--brunswick-green);
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.carrossel-imagem:hover {
+    transform: scale(1.1);
+}
+
+/* Animação para o movimento do carrossel em loop contínuo */
+@keyframes slide {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-100% + 200px)); }
+}
+
+footer {
+    margin-top: auto; 
+    padding: 10px; 
+    text-align: center; 
+    background-color: var(--hunter-green); 
+    color: white; 
+    width: 100%;
+}
