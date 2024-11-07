@@ -1,179 +1,202 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik+Wet+Paint&family=Teko:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Rubik+Wet+Paint&family=Teko:wght@300..700&display=swap');
 
+/* Reset de estilos */
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-:root {
-    --fonte-principal: 'Roboto', sans-serif;
-    --fonte-secundario: 'Arial', sans-serif;
-    --branco-basico: #fff;
-    --preto-basico: #333;
-    --sage: #9c9c6f;
-    --hunter-green: #355e3b;
-    --fern-green: #6aa84f;
-    --brunswick-green: #2e4b3c;
-    --fundo-light: #f9f9f9;
-    --azul-principal: #0044cc;
-    --azul-escuro: #0033aa;
-    --preto: #000000;
-}
-
-/* Estilos globais */
+/* Corpo e fontes */
 body {
-    font-family: var(--fonte-principal);
+    font-family: 'Roboto', sans-serif;
+    color: #000; /* Cor do texto principal em preto */
     line-height: 1.6;
-    background-color: var(--brunswick-green);
-    color: var(--preto-basico);
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
+    background-color: #b6e3b1; /* Verde claro no fundo */
 }
 
-h1, h2 {
-    color: var(--hunter-green);
+/* Cabeçalho de herói */
+.hero {
+    background-image: url('banner-eletronica.jpg'); /* Imagem de fundo */
+    background-size: cover;
+    background-position: center;
+    color: #000; /* Texto em preto */
+    padding: 4rem 1rem;
     text-align: center;
-    margin-bottom: 20px;
+    font-family: 'Rubik Wet Paint', cursive;
 }
 
-/* Container centralizado */
-.container {
-    width: 90%;
-    max-width: 800px;
-    margin: 30px auto;
-    padding: 30px;
-    background-color: var(--branco-basico);
-    border-radius: 12px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    text-align: center;
+.hero h1 {
+    font-size: 3rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    color: #000; /* Título em preto */
 }
 
-/* Card de Música */
-.music-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 20px;
-    padding: 20px;
-    background-color: var(--fundo-light);
-    border-radius: 12px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
-    width: 100%;
-    max-width: 400px;
-    text-align: center;
+.hero p {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    color: #000; /* Texto em preto */
 }
 
-.music-card:hover {
-    transform: translateY(-5px);
-}
-
-/* Imagem da música */
-.music-card img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    margin-bottom: 15px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* Título e descrição */
-.music-card h3 {
-    color: var(--preto-basico);
-    font-size: 1.5em;
-    margin: 10px 0;
-}
-
-.music-card p {
-    font-size: 1em;
-    color: var(--preto-basico);
-    margin-bottom: 15px;
-}
-
-/* Botões de ação */
-.music-buttons {
-    display: flex;
-    gap: 15px;
-    justify-content: center;
-}
-
-.music-buttons button {
-    padding: 10px 20px;
-    font-size: 16px;
-    color: var(--branco-basico);
-    background-color: var(--azul-principal);
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s;
-}
-
-.music-buttons button:hover {
-    background-color: var(--azul-escuro);
-    transform: translateY(-2px);
-}
-
-/* Links */
-a {
-    color: var(--azul-principal);
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s;
-}
-
-a:hover {
-    color: var(--azul-escuro);
-    text-decoration: underline;
-}
-
-/* Barra de navegação */
+/* Navegação */
 .nav {
-    background-color: var(--preto-basico);
-    color: var(--branco-basico);
-    width: 100%;
-    padding: 15px 0;
+    background-color: #1f2b23; /* Verde escuro */
+    padding: 1rem;
     text-align: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    position: sticky;
-    top: 0;
 }
 
 .nav a {
-    margin: 0 20px;
-    color: var(--branco-basico);
+    color: #a4d4a4;
+    margin: 0 1rem;
+    text-decoration: none;
     font-weight: bold;
-    padding: 10px 15px;
-    border-radius: 5px;
-    transition: background-color 0.3s, transform 0.3s;
+    font-family: 'Teko', sans-serif;
+    font-size: 1.2rem;
+    text-transform: uppercase;
 }
 
 .nav a:hover {
-    background-color: var(--azul-escuro);
-    transform: scale(1.05);
+    color: #8fbc8f;
+    text-decoration: underline;
 }
 
-/* Ajustes de responsividade */
-@media (max-width: 600px) {
-    .container {
-        padding: 20px;
-    }
+/* Seção de introdução */
+.introduction {
+    text-align: center;
+    padding: 2rem;
+    color: #000; /* Texto em preto */
+}
 
-    .nav a {
-        padding: 8px 12px;
-        font-size: 14px;
-    }
+.introduction h2 {
+    color: #000; /* Título em preto */
+    font-family: 'Rubik Wet Paint', cursive;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
 
-    .music-card {
-        max-width: 100%;
-    }
+.introduction p,
+.introduction ul {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2rem;
+    color: #000; /* Texto em preto */
+}
 
-    .music-buttons button {
-        font-size: 14px;
-        padding: 8px 15px;
-    }
+.introduction ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 1rem;
+}
+
+.introduction ul li {
+    padding: 0.5rem 0;
+    color: #000; /* Texto em preto */
+}
+
+/* Container principal */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+}
+
+.container h2 {
+    font-family: 'Rubik Wet Paint', cursive;
+    color: #000; /* Título em preto */
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+/* Grid para os vídeos */
+.grid-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.artist {
+    flex: 1 1 30%;
+    background-color: #455845; /* Verde escuro para os blocos de artista */
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+    color: #000; /* Texto em preto */
+}
+
+.artist strong {
+    display: block;
+    font-size: 1.5rem;
+    font-family: 'Teko', sans-serif;
+    margin-bottom: 0.5rem;
+    color: #000; /* Texto em preto */
+}
+
+.artist:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.video-container iframe {
+    width: 100%;
+    height: 200px;
+    border-radius: 5px;
+    border: 3px solid #000; /* Borda preta nos vídeos */
+}
+
+/* Estilo da seção de artistas relacionados */
+.related-artists {
+    background-color: #3a4c3a; /* Verde musgo escuro */
+    padding: 2rem;
+    text-align: center;
+    margin-top: 2rem;
+    color: #000; /* Texto em preto */
+}
+
+.related-artists h2 {
+    font-family: 'Rubik Wet Paint', cursive;
+    color: #000; /* Título em preto */
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.related-artists ul {
+    list-style-type: none;
+    padding: 0;
+    font-family: 'Teko', sans-serif;
+    font-size: 1.2rem;
+    color: #000; /* Texto em preto */
+}
+
+.related-artists li {
+    padding: 0.5rem;
+    color: #000; /* Texto em preto */
+}
+
+/* Rodapé com redes sociais */
+footer {
+    background-color: #1f2b23; /* Verde escuro */
+    color: #a4d4a4;
+    padding: 1.5rem;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+footer a {
+    color: #9aba9a;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #d2ffd2;
+    text-decoration: underline;
+}
+
+footer p {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: #000; /* Texto em preto */
 }
