@@ -1,0 +1,372 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Wet+Paint&family=Teko:wght@300..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --fonte-principal: "Rubik Wet Paint", system-ui;
+    --fonte-secundario: "Teko", sans-serif;
+    --timberwolf: #dad7cdff;
+    --sage: rgb(206, 216, 189);
+    --fern-green: #588157ff;
+    --hunter-green: #3a5a40ff;
+    --brunswick-green: #344e41ff;
+    --preto-basico: #000000ff;
+    --branco-basico: #ffffff;
+}
+
+body {
+    font-family: var(--fonte-secundario);
+    background-color: var(--sage);
+    color: var(--preto-basico);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 20px;
+}
+
+header {
+    background-color: var(--hunter-green);
+    width: 100%;
+    padding: 20px;
+    color: var(--branco-basico);
+    text-align: center;
+    position: relative;
+}
+
+.logo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    object-fit: cover;
+    z-index: 10;
+}
+
+h1 {
+    font-family: var(--fonte-principal);
+    color: var(--branco-basico);
+    margin-top: 0;
+}
+
+nav {
+    margin-top: 30px;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav a {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: var(--fern-green);
+    color: var(--branco-basico);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+nav a:hover {
+    background-color: var(--hunter-green);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    transform: translateY(-5px);
+}
+
+nav a:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.2);
+}
+
+nav a:active {
+    transform: translateY(0);
+}
+
+main {
+    max-width: 1200px;
+    width: 100%;
+    padding: 40px 20px;
+}
+
+section {
+    margin: 20px 0;
+    padding: 20px;
+    background-color: var(--branco-basico);
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-family: var(--fonte-principal);
+    color: var(--preto-basico);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+ul li strong {
+    color: var(--hunter-green);
+}
+
+.artista-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.artista-row {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.artista-img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
+    margin: 10px;
+    border: 2px solid white;
+    transition: transform 0.3s ease;
+}
+
+.artista-img:hover {
+    transform: scale(1.05);
+}
+
+footer {
+    margin-top: auto;
+    padding: 10px;
+    text-align: center;
+    background-color: var(--hunter-green);
+    color: white;
+    width: 100%;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .logo {
+        width: 60px;
+        height: 60px;
+        top: 10px;
+        left: 10px;
+    }
+
+    .carrossel-container {
+        max-width: 90%;
+    }
+
+    .carrossel-container button {
+        padding: 10px;
+        font-size: 18px;
+    }
+
+    nav a {
+        padding: 12px 25px;
+        font-size: 16px;
+    }
+
+    .artista-row {
+        flex-direction: column;
+    }
+
+    .artista-img {
+        max-width: 80%;
+    }
+}
+
+@media (max-width: 600px) {
+    .logo {
+        width: 50px;
+        height: 50px;
+    }
+
+    nav a {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    .carrossel-item {
+        min-width: 80%;
+    }
+}
+
+@media (max-width: 480px) {
+    main {
+        padding: 20px 10px;
+    }
+
+    .logo {
+        width: 45px;
+        height: 45px;
+    }
+
+    .carrossel-container button {
+        padding: 8px;
+        font-size: 16px;
+    }
+
+    .carrossel-item {
+        min-width: 70%;
+    }
+
+    .artista-img {
+        max-width: 90%;
+    }
+}
+
+/* Carrossel */
+.carrossel-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px; /* Controle o tamanho do carrossel */
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.carrossel {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carrossel-item {
+    min-width: 100%;
+    text-align: center;
+}
+
+.carrossel-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.carrossel-container button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 10;
+    transition: background-color 0.3s ease;
+}
+
+.carrossel-container .prev-btn {
+    left: 10px;
+}
+
+.carrossel-container .next-btn {
+    right: 10px;
+}
+
+.carrossel-container button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.metodologia-container, .projeto-futuro-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.metodologia-item, .projeto-futuro-item {
+    background-color: var(--branco-basico);
+    border-radius: 8px;
+    padding: 20px;
+    width: 250px;  /* Define um tamanho fixo para cada item */
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.metodologia-item:hover, .projeto-futuro-item:hover {
+    transform: translateY(-10px);
+}
+
+.metodologia-img, .projeto-futuro-img {
+    width: 80%;
+    max-width: 150px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+}
+
+.metodologia-texto h3, .projeto-futuro-texto h3 {
+    font-family: var(--fonte-principal);
+    color: var(--hunter-green);
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.metodologia-texto p, .projeto-futuro-texto p {
+    font-size: 1rem;
+    color: var(--preto-basico);
+}
+
+/* Estilo geral para os containers */
+.tecnologias-container, .tendencias-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.tecnologia-item, .tendencia-item {
+    background-color: var(--branco-basico);
+    border-radius: 8px;
+    padding: 20px;
+    width: 250px;  /* Define um tamanho fixo para cada item */
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.tecnologia-item:hover, .tendencia-item:hover {
+    transform: translateY(-10px);
+}
+
+/* Estilização das imagens */
+.tecnologia-img, .tendencia-img {
+    width: 80%;
+    max-width: 150px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+}
+
+.tecnologia-texto h3, .tendencia-texto h3 {
+    font-family: var(--fonte-principal);
+    color: var(--hunter-green);
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.tecnologia-texto p, .tendencia-texto p {
+    font-size: 1rem;
+    color: var(--preto-basico);
+}
