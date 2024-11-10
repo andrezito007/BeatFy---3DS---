@@ -3,34 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cantores de Forró</title>
+    <title>Forró</title>
+    <link rel="icon" href="../img/logo.png" type="image/png"> 
     <link rel="stylesheet" href="forro.css">
 </head>
 <body>
 
-<header>
-    <h1>Cantores de Forró</h1>
-</header>
-
-<!-- Botões no início da página -->
-<section class="inicio-botoes">
-    <div class="buttons-container">
-        <a href="#inicio" class="menu-btn">Início</a>
-        <a href="#generos" class="menu-btn">Gêneros Musicais</a>
+    <header>
+        <img src="../img/logo.png" alt="Logo BeatFy" class="logo">
+        <div class="cabecalho-nav">
+        <h1>Forro</h1>
+        <nav>
+            <ul>
+                <li><a href="../generos/generos.html">Gêneros Musicais</a></li>
+                <li><a href="../desenvolvimento/desenvolvimento.html">Desenvolvimento</a></li>
+            </ul>
+        </nav>
     </div>
-</section>
+    </header>
 
 <main>
-  
 
- 
     <!-- Carrossel de Imagens -->
     <section class="carrossel">
         <div class="carousel-container">
             <div class="carousel">
                 <div class="carousel-item active">
-                    <!-- Caminho para imagem local -->
-                    <img src="img/zeVaqueiro.jpg" alt="Zé Vaqueiro">
+                    <img src="../forro/img/zeVaqueiro.jpg" alt="Zé Vaqueiro">
                     <p>Zé Vaqueiro</p>
                 </div>
                 <div class="carousel-item">
@@ -42,8 +41,8 @@
                     <p>Naiara Azevedo</p>
                 </div>
                 <div class="carousel-item">
-                    <img src="img/xand aviao.jpg" alt="Xand Avião & Wesley Safadão ">
-                    <p>Xand Avião & Wesley Safadão </p>
+                    <img src="img/xand aviao.jpg" alt="Xand Avião & Wesley Safadão">
+                    <p>Xand Avião & Wesley Safadão</p>
                 </div>
                 <div class="carousel-item">
                     <img src="img/nattan.jpg" alt="Nattan">
@@ -53,99 +52,142 @@
             <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
             <button class="next" onclick="moveSlide(1)">&#10095;</button>
         </div>
+    </section>
 
+    <!-- Cantores Section -->
+    <!-- Cantores Section -->
+<section class="cantores">
+    <ul class="cantores">
+        <li class="artist">
+            <strong>João Gomes</strong> - Música: "Meu Pedaço de Pecado"
+            <div class="video-container">
+                <a href="https://www.youtube.com/watch?v=H1DEczvTjgE" target="_blank">
+                    <img src="https://img.youtube.com/vi/H1DEczvTjgE/0.jpg" alt="João Gomes - Meu Pedaço de Pecado" class="video-thumbnail">
+                </a>
+                <p><strong>João Gomes - <em>Meu Pedaço de Pecado</em></strong></p>
+            </div>
+        </li>
         
-        <section class="cantores">
-            <ul class="cantores">
-                <li class="artist">
-                    <strong>João Gomes</strong> - Música: "Meu Pedaço de Pecado"
-                    <div class="video-container">
-                        <iframe src="https://www.youtube.com/watch?v=H1DEczvTjgE" title="João Gomes - Meu Pedaço de Pecado" allowfullscreen></iframe>
-                        <p><strong>João Gomes - <em>Meu Pedaço de Pecado</em></strong></p>
-                    </div>
-                </li>
-            
-                <li class="artist">
-                    <strong>Zé Vaqueiro</strong> - Música: "Cavalo de Aço"
-                    <div class="video-container">
-                        <iframe src="https://www.youtube.com/embed/H1DEczvTjgE?si=E_jGrq4p0CsTdktS" title="Zé Vaqueiro - Cavalo de Aço" allowfullscreen></iframe>
-                        <p><strong>Zé Vaqueiro - <em>Cavalo de Aço</em></strong></p>
-                    </div>
-                </li>
-            
-                <li class="artist">
-                    <strong>Tarcísio do Acordeon</strong> - Música: "Solitário"
-                    <div class="video-container">
-                        <iframe src="https://www.youtube.com/embed/QlGlZZs1UNM" title="Tarcísio do Acordeon - Solitário" allowfullscreen></iframe>
-                        <p><strong>Tarcísio do Acordeon - <em>Solitário</em></strong></p>
-                    </div>
-                </li>
-            
-                <li class="artist">
-                    <strong>Vitor Fernandes</strong> - Música: "Imagina a Gente"
-                    <div class="video-container">
-                        <iframe src="https://www.youtube.com/embed/oP9T9xUM9nM" title="Vitor Fernandes - Imagina a Gente" allowfullscreen></iframe>
-                        <p><strong>Vitor Fernandes - <em>Imagina a Gente</em></strong></p>
-                    </div>
-                </li>
-            
-                <li class="artist">
-                    <strong>João Neto & Frederico</strong> - Música: "Chorando com Você"
-                    <div class="video-container">
-                        <iframe src="https://www.youtube.com/embed/Clt9yHtJ0zI" title="João Neto & Frederico - Chorando com Você" allowfullscreen></iframe>
-                        <p><strong>João Neto & Frederico - <em>Chorando com Você</em></strong></p>
-                    </div>
-                </li>
-            
-                <li class="artist">
-                    <strong>Nattan</strong> - Música: "Por Ela Eu Vivo"
-                    <div class="video-container">
-                        <iframe src="https://www.youtube.com/embed/pX7VZ6rM6xE" title="Nattan - Por Ela Eu Vivo" allowfullscreen></iframe>
-                        <p><strong>Nattan - <em>Por Ela Eu Vivo</em></strong></p>
-                    </div>
-                </li>
-            
-                <li class="artist">
-                    <strong>Léo Santana</strong> - Música: "Senta com S"
-                    <div class="video-container">
-                        <iframe src="https://www.youtube.com/embed/UwtzY-jpdV0" title="Léo Santana - Senta com S" allowfullscreen></iframe>
-                        <p><strong>Léo Santana - <em>Senta com S</em></strong></p>
-                    </div>
-                </li>
-            
-                <li class="artist">
-                    <strong>Wesley Safadão</strong> - Música: "Tropecei"
-                    <div class="video-container">
-                        <iframe src="https://www.youtube.com/embed/Fp1NRxYZmOY" title="Wesley Safadão - Tropecei" allowfullscreen></iframe>
-                        <p><strong>Wesley Safadão - <em>Tropecei</em></strong></p>
-                    </div>
-                </li>
-            
-                <li class="artist">
-                    <strong>Xand Avião</strong> - Música: "Cavalo de Troia"
-                    <div class="video-container">
-                        <iframe src="https://www.youtube.com/embed/T4cpm3h9A00" title="Xand Avião - Cavalo de Troia" allowfullscreen></iframe>
-                        <p><strong>Xand Avião - <em>Cavalo de Troia</em></strong></p>
-                    </div>
-                </li>
-            
-                <li class="artist">
-                    <strong>Mara Pavanelly</strong> - Música: "Sabe Me Amar"
-                    <div class="video-container">
-                        <iframe src="https://www.youtube.com/embed/8Up1bVYhvjM" title="Mara Pavanelly - Sabe Me Amar" allowfullscreen></iframe>
-                        <p><strong>Mara Pavanelly - <em>Sabe Me Amar</em></strong></p>
-                    </div>
-                </li>
-            
-            </ul>
-            
-        </section>
-    </main>
-    
-    <footer>
-        <p>© 2024 Cantores de Forró. Todos os direitos reservados.</p>
-    </footer>
-    <script src="forro.js"></script>
-    
+        <li class="artist">
+            <strong>Zé Vaqueiro</strong> - Música: "CHOREI NA VAQUEJADA"
+            <div class="video-container">
+                <a href="https://www.youtube.com/watch?v=SX_UVjpVrFA" target="_blank">
+                    <img src="https://i.ytimg.com/vi/SX_UVjpVrFA/maxresdefault.jpg" alt="Zé Vaqueiro - Cavalo de Aço" class="video-thumbnail">
+                </a>
+                <p><strong>Zé Vaqueiro - <em>CHOREI NA VAQUEJADA</em></strong></p>
+            </div>
+        </li>
+
+        <li class="artist">
+            <strong>Tarcísio do Acordeon</strong> - Música: "SALVA ME"
+            <div class="video-container">
+                <a href="https://www.youtube.com/watch?v=8P7xr2P4mmc" target="_blank">
+                    <img src="https://i.ytimg.com/vi/8P7xr2P4mmc/sddefault.jpg" alt="Tarcísio do Acordeon - Solitário" class="video-thumbnail">
+                </a>
+                <p><strong>Tarcísio do Acordeon - <em>SALVA ME</em></strong></p>
+            </div>
+        </li>
+        
+        <li class="artist">
+            <strong>Vitor Fernandes</strong> - Música: "Imagina a Gente"
+            <div class="video-container">
+                <a href="https://www.youtube.com/embed/oP9T9xUM9nM" target="_blank">
+                    <img src="https://img.youtube.com/vi/oP9T9xUM9nM/0.jpg" alt="Vitor Fernandes - Imagina a Gente" class="video-thumbnail">
+                </a>
+                <p><strong>Vitor Fernandes - <em>Imagina a Gente</em></strong></p>
+            </div>
+        </li>
+
+        <li class="artist">
+            <strong>João Neto & Frederico</strong> - Música: "Chorando com Você"
+            <div class="video-container">
+                <a href="https://www.youtube.com/embed/Clt9yHtJ0zI" target="_blank">
+                    <img src="https://img.youtube.com/vi/Clt9yHtJ0zI/0.jpg" alt="João Neto & Frederico - Chorando com Você" class="video-thumbnail">
+                </a>
+                <p><strong>João Neto & Frederico - <em>Chorando com Você</em></strong></p>
+            </div>
+        </li>
+
+        <li class="artist">
+            <strong>Nattan</strong> - Música: "Por Ela Eu Vivo"
+            <div class="video-container">
+                <a href="https://www.youtube.com/embed/pX7VZ6rM6xE" target="_blank">
+                    <img src="https://img.youtube.com/vi/pX7VZ6rM6xE/0.jpg" alt="Nattan - Por Ela Eu Vivo" class="video-thumbnail">
+                </a>
+                <p><strong>Nattan - <em>Por Ela Eu Vivo</em></strong></p>
+            </div>
+        </li>
+
+        <li class="artist">
+            <strong>Léo Santana</strong> - Música: "Senta com S"
+            <div class="video-container">
+                <a href="https://www.youtube.com/embed/UwtzY-jpdV0" target="_blank">
+                    <img src="https://img.youtube.com/vi/UwtzY-jpdV0/0.jpg" alt="Léo Santana - Senta com S" class="video-thumbnail">
+                </a>
+                <p><strong>Léo Santana - <em>Senta com S</em></strong></p>
+            </div>
+        </li>
+
+        <li class="artist">
+            <strong>Wesley Safadão</strong> - Música: "Tropecei"
+            <div class="video-container">
+                <a href="https://www.youtube.com/embed/Fp1NRxYZmOY" target="_blank">
+                    <img src="https://img.youtube.com/vi/Fp1NRxYZmOY/0.jpg" alt="Wesley Safadão - Tropecei" class="video-thumbnail">
+                </a>
+                <p><strong>Wesley Safadão - <em>Tropecei</em></strong></p>
+            </div>
+        </li>
+
+        <li class="artist">
+            <strong>Xand Avião</strong> - Música: "Cavalo de Troia"
+            <div class="video-container">
+                <a href="https://www.youtube.com/embed/T4cpm3h9A00" target="_blank">
+                    <img src="https://img.youtube.com/vi/T4cpm3h9A00/0.jpg" alt="Xand Avião - Cavalo de Troia" class="video-thumbnail">
+                </a>
+                <p><strong>Xand Avião - <em>Cavalo de Troia</em></strong></p>
+            </div>
+        </li>
+
+        <li class="artist">
+            <strong>Mara Pavanelly</strong> - Música: "Sabe Me Amar"
+            <div class="video-container">
+                <a href="https://www.youtube.com/embed/8Up1bVYhvjM" target="_blank">
+                    <img src="https://img.youtube.com/vi/8Up1bVYhvjM/0.jpg" alt="Mara Pavanelly - Sabe Me Amar" class="video-thumbnail">
+                </a>
+                <p><strong>Mara Pavanelly - <em>Sabe Me Amar</em></strong></p>
+            </div>
+        </li>
+
+        <!-- Novos Vídeos -->
+        <li class="artist">
+            <strong>Felipe Amorim</strong> - Música: "Avião de Papel"
+            <div class="video-container">
+                <a href="https://www.youtube.com/embed/QrE0skUHgMI" target="_blank">
+                    <img src="https://img.youtube.com/vi/QrE0skUHgMI/0.jpg" alt="Felipe Amorim - Avião de Papel" class="video-thumbnail">
+                </a>
+                <p><strong>Felipe Amorim - <em>Avião de Papel</em></strong></p>
+            </div>
+        </li>
+
+        <li class="artist">
+            <strong>Solange Almeida</strong> - Música: "Me Sente"
+            <div class="video-container">
+                <a href="https://www.youtube.com/embed/V7JlMjLrbqI" target="_blank">
+                    <img src="https://img.youtube.com/vi/V7JlMjLrbqI/0.jpg" alt="Solange Almeida - Me Sente" class="video-thumbnail">
+                </a>
+                <p><strong>Solange Almeida - <em>Me Sente</em></strong></p>
+            </div>
+        </li>
+    </ul>
+</section>
+
+</main>
+
+<footer>
+    <p>&copy; 2024 BeatFy. Todos os direitos reservados.</p>
+</footer>
+
+<script src="forro.js"></script>
+
 </body>
 </html>

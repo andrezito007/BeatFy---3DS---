@@ -288,26 +288,18 @@ h3 {
 .carrossel-container {
     position: relative;
     width: 100%;
-    max-width: 600px;       
+    max-width: 100%; /* Altera o max-width para ocupar toda a largura da tela */
     margin: 0 auto;
     overflow: hidden;
 }
 
-.carrossel-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    image-rendering: crisp-edges;
-}
-
 .carrossel {
     display: flex;
-    transition: transform 0.5s ease;
+    transition: none; /* Remove a transição de deslocamento para visualizar todas as imagens ao mesmo tempo */
 }
 
 .carrossel-item {
-    min-width: 100%; 
+    min-width: 20%; /* Ajuste para exibir todas as imagens ao mesmo tempo */
     box-sizing: border-box;
     text-align: center;
 }
@@ -319,31 +311,6 @@ h3 {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.carrossel-container button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    padding: 15px;
-    font-size: 24px;
-    cursor: pointer;
-    z-index: 10;
-    transition: background-color 0.3s ease;
-}
-
-.carrossel-container .prev-btn {
-    left: 10px;
-}
-
-.carrossel-container .next-btn {
-    right: 10px;
-}
-
-.carrossel-container button:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-}
 
 
 @media (max-width: 1024px) {

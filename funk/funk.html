@@ -3,87 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carrossel de Cantores de Funk</title>
-    <style>
-        /* Estilos gerais do carrossel */
-        .carousel-container {
-            position: relative;
-            width: 80%;
-            max-width: 600px;
-            margin: auto;
-            overflow: hidden;
-            border: 2px solid #ccc;
-            border-radius: 10px;
-        }
 
-        .carousel-slide {
-            display: flex;
-            transition: transform 0.5s ease-in-out;
-        }
-
-        .carousel-slide img {
-            width: 100%;
-            border-radius: 10px;
-        }
-
-        /* Estilos para os botões de navegação */
-        .nav-buttons {
-            position: absolute;
-            top: 50%;
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            transform: translateY(-50%);
-        }
-
-        .nav-button {
-            background-color: rgba(0, 0, 0, 0.5);
-            border: none;
-            color: white;
-            font-size: 24px;
-            cursor: pointer;
-            padding: 5px;
-            border-radius: 5px;
-        }
-    </style>
 </head>
 <body>
-    <section class="carousel-section">
-        <h2>Top Cantores de Funk</h2>
-        <div class="carousel-container">
-            <div class="carousel-slide">
-                <img src="img/cantor1.jpg" alt="Cantor de Funk 1">
-                <img src="img/cantor2.jpg" alt="Cantor de Funk 2">
-                <img src="img/cantor3.jpg" alt="Cantor de Funk 3">
-                <img src="img/cantor4.jpg" alt="Cantor de Funk 4">
-                <img src="img/cantor5.jpg" alt="Cantor de Funk 5">
-                <img src="img/cantor6.jpg" alt="Cantor de Funk 6">
-                <img src="img/cantor7.jpg" alt="Cantor de Funk 7">
-                <img src="img/cantor8.jpg" alt="Cantor de Funk 8">
-                <img src="img/cantor9.jpg" alt="Cantor de Funk 9">
-                <img src="img/cantor10.jpg" alt="Cantor de Funk 10">
-            </div>
-        </div>
-    </section>
-
-    <script>
-        let currentIndex = 0;
-        const slideInterval = 3000; // Tempo em milissegundos (3 segundos)
-        const slides = document.querySelector('.carousel-slide');
-        const totalSlides = slides.children.length;
-
-        function showNextSlide() {
-            currentIndex = (currentIndex + 1) % totalSlides;
-            updateSlidePosition();
-        }
-
-        function updateSlidePosition() {
-            slides.style.transform = `translateX(-${currentIndex * 100}%)`;
-        }
-
-        setInterval(showNextSlide, slideInterval);
-    </script>
-</body>
+    
 </html>
 
     <meta charset="UTF-8">
@@ -96,15 +19,28 @@
 <body>
     <header>
         <img src="../img/logo.png" alt="Logo BeatFy" class="logo">
-        <h1>BeatFy</h1>
+        <h1>Funk</h1>
         <div class="menu-container">
             <a href="../index.html" class="menu-btn">Início</a>
             <a href="../generos/generos.html" class="menu-btn">Gêneros musicais</a>
         </div>
     </header>
 
+    <section class="carousel-section">
+        <div class="carousel-container">
+            <div class="carousel-container">
+                <div class="carousel-slide">
+                    <img src="" alt="Slide 1">
+                    <img src="image2.jpg" alt="Slide 2">
+                    <img src="image3.jpg" alt="Slide 3">
+                    <!-- Adicione mais imagens conforme necessário -->
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="principal-conteudo">
-        <h1>A História do Funk Brasileiro</h1>
+        <h4>A História do Funk Brasileiro</h4>
         <p>
             O funk brasileiro tem suas raízes na cultura das periferias do Rio de Janeiro, surgindo na década de 1980.
             Influenciado por estilos como o Miami bass e o freestyle, o funk ganhou popularidade nos bailes das
@@ -221,6 +157,13 @@
             </ul>
         </div>
     </section>
+
+    <footer>
+        <p>© 2024 BeatFy. Todos os direitos reservados.</p>
+    </footer>
+    
+    <script src="funk.js"></script>
+    
 </body>
 
 </html>

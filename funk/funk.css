@@ -20,33 +20,70 @@
 body {
     font-family: var(--fonte-principal), sans-serif;
     background-color: var(--sage);
-    color: var(--preto-basico);
+    color: var(--hunter-green); /* Mudando a cor do texto para branco */
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center; /* Centralizando o conteúdo verticalmente */
+    min-height: 100vh; /* Garante que o conteúdo ocupe toda a altura da tela */
 }
 
+
+
 header {
-    background-color: var(--hunter-green); 
-    width: 100%; 
-    padding: 20px; 
-    color: var(--branco-basico); 
-    text-align: center; 
+    background-color: var(--hunter-green);
+    width: 100%;
+    padding: 20px;
+    color: var(--branco-basico);
+    text-align: center;
 }
 
 .logo {
-    width: 50px;
-    height: 50px;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
     position: absolute;
-    top: 20px;
-    left: 20px; 
+    top: 15px;
+    left: 15px;
     object-fit: cover;
+    z-index: 10;
+}
+
+@media (max-width: 1024px) {
+    .logo {
+        width: 70px;
+        height: 70px;
+        top: 10px;
+        left: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .logo {
+        width: 60px;
+        height: 60px;
+        top: 10px;
+        left: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        width: 50px;
+        height: 50px;
+        top: 10px;
+        left: 10px;
+    }
 }
 
 h1 {
     font-size: 3rem;
-    color: var(--branco-basico);
+    color: var(--branco-basico); /* Garantindo que o título esteja branco */
+}
+
+h4 {
+    font-size: 3rem;
+    color: var(--hunter-green); /* Garantindo que o título esteja branco */
 }
 
 section {
@@ -57,7 +94,6 @@ section {
 
 .lista-musicas {
     display: flex;
-
 }
 
 h2 {
@@ -66,12 +102,12 @@ h2 {
     margin-bottom: 20px;
 }
 
-
 p {
     font-size: 1.1rem;
     line-height: 1.6;
     text-align: justify;
-    color: var(--preto-basico);
+    color: var(--branco-basico); /* Garantindo que o texto do parágrafo esteja branco */
+    font-family: var(--fonte-secundario);
 }
 
 ul {
@@ -123,7 +159,7 @@ ul {
     h1 {
         font-size: 2.5rem;
     }
-    
+
     h2 {
         font-size: 2rem;
     }
@@ -142,10 +178,10 @@ ul {
 
 .menu-btn {
     text-decoration: none;
-    background: linear-gradient(45deg, #6a11cb, #2575fc);
+    background-color: var(--fern-green);
     color: white;
     padding: 10px 20px;
-    font-size: 16px;
+    font-size: 1.7em;
     font-weight: bold;
     border-radius: 50px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -155,8 +191,7 @@ ul {
 }
 
 .menu-btn:hover {
-    transform: translateY(-5px); 
-    background: linear-gradient(45deg, #2575fc, #6a11cb);
+    transform: translateY(-5px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
@@ -169,10 +204,65 @@ ul {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
-    list-style-type: none; 
+    list-style-type: none;
     padding: 0;
 }
 
 .video-container iframe {
     width: 100%;
+}
+
+/* Estilos gerais do carrossel */
+.carousel-container {
+    position: relative;
+    width: 80%;
+    max-width: 600px;
+    margin: auto;
+    overflow: hidden;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+}
+
+.carousel-slide {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Estilos para os botões de navegação */
+.nav-buttons {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.nav-button {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+/* Rodapé */
+footer {
+    margin-top: auto;
+    padding: 10px;
+    text-align: center;
+    background-color: var(--hunter-green);
+    color: var(--branco-basico);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
 }

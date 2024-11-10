@@ -19,43 +19,107 @@
 }
 
 body {
-    font-family: 'Arial', sans-serif;
-    margin: 20px;
-    background-color: var(--timberwolf);
-    color: var(--hunter-green);
+    font-family: var(--fonte-secundario);
+    background-color: var(--sage);
+    color: var(--preto-basico);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+    padding: 20px;
 }
 
 header {
-    background-color: var(--fern-green);
-    padding: 20px;
-    border-radius: 8px;
-    color: var(--branco-basico);
+    background-color: var(--hunter-green); 
+    width: 100%; 
+    padding: 20px; 
+    color: var(--branco-basico); 
+    text-align: center; 
 }
 
 h1 {
-    color: var(--branco-basico);
-    text-align: center;
-    font-family: var(--fonte-principal);
-    font-size: 2.5em;
+    font-family: var(--fonte-principal); 
+    margin-bottom: 15px; 
+    color: var(--branco-basico); 
 }
 
-h2 {
-    color: var(--brunswick-green);
-    margin-top: 20px;
-    font-family: var(--fonte-secundario);
-    font-weight: 700;
+nav {
+    margin-top:px;
+    display: flex;
+    justify-content: center; 
 }
 
-/* Carrossel de Imagens */
+ul {
+    list-style-type: none;
+    display: flex; 
+    gap: 20px; 
+    padding: 0;
+    margin: 0; 
+}
+
+nav a {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: var(--fern-green); 
+    color: var(--branco-basico); 
+    text-decoration: none; 
+    font-weight: bold; 
+    font-size: 18px;
+    text-transform: uppercase; 
+    letter-spacing: 1px;
+    border-radius: 30px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    transition: all 0.3s ease; 
+    cursor: pointer;
+}
+
+nav a:hover {
+    background-color: var(--hunter-green); 
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); 
+    transform: translateY(-5px); 
+}
+
+nav a:focus {
+    outline: none; 
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.2); 
+}
+
+nav a:active {
+    transform: translateY(0); 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+
+@media (max-width: 600px) {
+    nav a {
+        padding: 12px 25px;
+        font-size: 16px; 
+    }
+}
+
+@media (min-width: 601px) and (max-width: 900px) {
+    nav a {
+        padding: 13px 27px;
+    }
+}
+
+
+main {
+    max-width: 900px;
+    width: 100%;
+    margin: 0 auto;
+}
+
 .carrossel {
     position: relative;
     margin-top: 30px;
-    text-align: center;
 }
 
 .carousel-container {
     position: relative;
-    max-width: 800px;
+    max-width: 100%;
     margin: auto;
     overflow: hidden;
 }
@@ -63,17 +127,22 @@ h2 {
 .carousel {
     display: flex;
     transition: transform 0.5s ease;
+    justify-content: center;
 }
 
 .carousel-item {
     min-width: 100%;
     transition: transform 0.5s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .carousel-item img {
-    width: 100%;
+    width: 300%;
     border-radius: 8px;
     object-fit: cover;
+    max-width: 600px;
 }
 
 .carousel-item p {
@@ -87,7 +156,7 @@ button {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: var(--brunswick-green);
     color: white;
     border: none;
     font-size: 2em;
@@ -105,124 +174,160 @@ button.next {
 }
 
 button:hover {
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: var(--brunswick-green);
 }
 
-/* Cantores Section */
 .cantores {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px; /* Ajuste para mais espaçamento */
+    justify-items: center;
     margin-top: 30px;
+    padding: 0 20px; /* Adicionando padding para não grudar nas bordas */
 }
 
-article, .artist {
-    background-color: var(--branco-basico);
+.artist {
+    background-color: var(--sage);
     border: 1px solid #e0e0e0;
     border-radius: 8px;
     padding: 15px;
-    width: 300px;
+    width: 280px;
     transition: transform 0.2s;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    background-color: var(--sage); /* Fundo mais suave para os artigos */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
-article:hover, .artist:hover {
+.artist:hover {
     transform: scale(1.05);
-    background-color: var(--hunter-green); /* Alterando para um verde escuro no hover */
-    color: var(--branco-basico); /* Mudando o texto para branco quando em hover */
+    background-color: var(--hunter-green);
+    color: var(--branco-basico);
+}
+
+.video-container {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.video-thumbnail {
+    width: 100%;
+    height: auto;
+    max-width: 320px; /* Ajuste o tamanho para um limite razoável */
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.video-thumbnail:hover {
+    transform: scale(1.05); /* Pequeno zoom para efeito visual */
 }
 
 iframe {
     width: 100%;
-    height: 200px;
+    height: 315px;
     border: none;
-    margin-top: 15px;
-}
-
-.button {
-    display: inline-block;
-    background-color: var(--fern-green); /* Cor de botão mais forte */
-    color: var(--branco-basico);
-    padding: 10px 15px;
-    border-radius: 5px;
-    text-decoration: none;
-    margin-top: 10px;
-    font-family: var(--fonte-secundario);
-    transition: background-color 0.3s ease;
-}
-
-.button:hover {
-    background-color: var(--hunter-green); /* Escurecendo o botão no hover */
+    margin-bottom: 15px;
 }
 
 footer {
     text-align: center;
     margin-top: 40px;
     font-size: 0.9em;
-    color: var(--brunswick-green); /* Usando uma cor mais suave para o rodapé */
-    font-family: var(--fonte-secundario);
+    color: var(--brunswick-green);
 }
 
-/* Responsividade para telas pequenas */
 @media (max-width: 768px) {
-    h1 {
-        font-size: 2rem;
+    .cantores {
+        grid-template-columns: 1fr 1fr;
     }
-    .carousel-container {
+
+    .artist {
+        width: 100%;
+        max-width: 320px;
+    }
+
+    .carrossel-item img {
         max-width: 100%;
     }
-    .carousel-item img {
-        height: 300px; /* Ajuste a altura das imagens no carrossel para telas pequenas */
-    }
-    .cantores {
-        flex-direction: column; /* Mudar o layout para coluna em telas menores */
-        align-items: center;
-    }
-    article, .artist {
+
+    iframe {
         width: 100%;
-        max-width: 320px; /* Ajusta a largura dos artigos em dispositivos móveis */
+        height: 250px;
+    }
+
+    .menu-btn {
+        font-size: 14px;
+        padding: 8px 16px;
     }
 }
 
-/* Estilo para o botão de menu */
-.menu-btn {
-    text-decoration: none;
-    background: linear-gradient(45deg, #6a11cb, #2575fc); /* Gradiente de cor para o fundo */
-    color: white; /* Cor do texto */
-    padding: 10px 20px; /* Espaçamento interno */
-    font-size: 16px; /* Tamanho da fonte */
-    font-weight: bold; /* Peso da fonte */
-    border-radius: 50px; /* Borda arredondada */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
-    transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease; /* Efeitos de transição */
-    text-align: center; /* Alinha o texto ao centro */
-    display: inline-block; /* Exibe como bloco inline */
+@media (max-width: 480px) {
+    .cantores {
+        grid-template-columns: 1fr;
+    }
+
+    .artist {
+        width: 100%;
+        max-width: 280px;
+    }
+
+    iframe {
+        height: 200px;
+    }
+
+    .menu-btn {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
 }
 
-.menu-btn:hover {
-    transform: translateY(-5px); /* Efeito de elevação ao passar o mouse */
-    background: linear-gradient(45deg, #2575fc, #6a11cb); /* Inverte as cores do gradiente */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Aumenta a sombra */
+footer {
+    margin-top: auto; 
+    padding: 10px; 
+    text-align: center; 
+    background-color: var(--hunter-green); 
+    color: white; 
+    width: 100%;
 }
 
-.menu-btn:focus {
-    outline: none; /* Remove o contorno padrão ao focar */
-    box-shadow: 0 0 10px 2px rgba(37, 117, 252, 0.5); /* Sombra ao focar no botão */
+.logo {
+    width: 80px;          
+    height: 80px;         
+    border-radius: 50%;   
+    position: absolute;      
+    top: 15px;            
+    left: 15px;           
+    object-fit: cover;    
+    z-index: 10;          
 }
 
-/* Centralizar a seção de botões */
-.inicio-botoes {
-    display: flex;
-    justify-content: center; /* Centraliza horizontalmente */
-    align-items: center; /* Centraliza verticalmente */
-    height: 100vh; /* Faz com que ocupe toda a altura da tela */
-    margin-top: 0; /* Remove o espaçamento acima */
+@media (max-width: 1024px) {
+    .logo {
+        width: 70px;      
+        height: 70px;     
+        top: 10px;        
+        left: 10px;       
+    }
 }
 
-/* Contêiner dos botões */
-.buttons-container {
-    display: flex;
-    gap: 20px; /* Espaçamento entre os botões */
+@media (max-width: 768px) {
+    .logo {
+        width: 60px;      
+        height: 60px;     
+        top: 10px;       
+        left: 10px;      
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        width: 50px;      
+        height: 50px;     
+        top: 10px;       
+        left: 10px;      
+    }
 }
