@@ -1,18 +1,27 @@
-let currentIndex = 0;
-const slideInterval = 3000; // Tempo em milissegundos (3 segundos)
-const slides = document.querySelector('.carousel-slide');
-const totalSlides = slides.children.length;
+let index = 0; // Índice da imagem atual
 
-// Função para mostrar o próximo slide
-function showNextSlide() {
-    currentIndex = (currentIndex + 1) % totalSlides;
-    updateSlidePosition();
+// Função para mover o carrossel na direção especificada
+function moverCarrossel(direcao) {
+  const carrossel = document.querySelector('.carrossel');
+  const totalImagens = document.querySelectorAll('.carrossel-item').length;
+
+  index += direcao;
+
+  // Se o índice for maior que o número de imagens, voltamos para o início
+  if (index >= totalImagens) {
+    index = 0;
+  }
+
+  // Se o índice for menor que 0, vamos para a última imagem
+  if (index < 0) {
+    index = totalImagens - 1;
+  }
+
+  // Movemos o carrossel para a posição correta
+  carrossel.style.transform = `translateX(-${index * 100}%)`;
 }
 
-// Atualiza a posição do slide
-function updateSlidePosition() {
-    slides.style.transform = `translateX(-${currentIndex * 100}%)`;
-}
-
-// Inicia o carrossel, passando os slides a cada 3 segundos
-setInterval(showNextSlide, slideInterval);
+// Configurando o intervalo para mover o carrossel automaticamente a cada 2,5 segundos (2500ms)
+setInterval(function() {
+  moverCarrossel(1); // Chama a função de mover o carrossel para a próxima imagem
+}, 2500); // 2500 milissegundos = 2,5 segundos

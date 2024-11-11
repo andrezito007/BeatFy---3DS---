@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik+Wet+Paint&family=Teko:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&family=Rubik+Moonrocks&display=swap');
 
 * {
     margin: 0;
@@ -6,8 +6,8 @@
 }
 
 :root {
-    --fonte-principal: "Rubik Wet Paint", system-ui;
-    --fonte-secundario: "Teko", sans-serif;
+    --fonte-principal: "Rubik Moonrocks", sans-serif;
+    --fonte-secundario: "Fjalla One", sans-serif;
     --timberwolf: #dad7cdff;
     --sage: rgb(206, 216, 189);
     --fern-green: #588157ff;
