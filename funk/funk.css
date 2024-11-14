@@ -20,12 +20,12 @@
 body {
     font-family: var(--fonte-principal), sans-serif;
     background-color: var(--sage);
-    color: var(--hunter-green); /* Mudando a cor do texto para branco */
+    color: var(--hunter-green);
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center; /* Centralizando o conteúdo verticalmente */
-    min-height: 100vh; /* Garante que o conteúdo ocupe toda a altura da tela */
+    justify-content: center; 
+    min-height: 100vh;
 }
 
 
@@ -78,12 +78,12 @@ header {
 
 h1 {
     font-size: 3rem;
-    color: var(--branco-basico); /* Garantindo que o título esteja branco */
+    color: var(--branco-basico); 
 }
 
 h4 {
     font-size: 3rem;
-    color: var(--hunter-green); /* Garantindo que o título esteja branco */
+    color: var(--hunter-green); 
 }
 
 section {
@@ -106,7 +106,7 @@ p {
     font-size: 1.1rem;
     line-height: 1.6;
     text-align: justify;
-    color: var(--branco-basico); /* Garantindo que o texto do parágrafo esteja branco */
+    color: var(--branco-basico); 
     font-family: var(--fonte-secundario);
 }
 
@@ -213,7 +213,6 @@ ul {
 }
 
 
-/* Estilos para os botões de navegação */
 .nav-buttons {
     position: absolute;
     top: 50%;
@@ -247,12 +246,11 @@ footer {
     position: relative;
 }
 
-/* Estilos do carrossel */
 .carrossel-container {
     position: relative;
-    width: 80%; /* Define que o carrossel ocupará 80% da largura da tela */
-    max-width: 1200px; /* Define uma largura máxima para o carrossel */
-    margin: 50px auto; /* Centraliza o carrossel na tela */
+    width: 80%; 
+    max-width: 1200px; 
+    margin: 50px auto; 
     overflow: hidden;
   }
   
@@ -262,11 +260,11 @@ footer {
   }
   
   .carrossel-item {
-    min-width: 100%; /* Cada item ocupará 100% da largura do carrossel */
+    min-width: 100%; 
     transition: opacity 0.5s ease;
   }
   
   .carrossel-item img {
-    width: 100%; /* As imagens ocuparão 100% da largura do carrossel */
-    height: auto; /* Mantém a proporção das imagens */
+    width: 100%;
+    height: auto; 
   }
