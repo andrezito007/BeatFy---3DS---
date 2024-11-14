@@ -22,12 +22,13 @@ document.addEventListener("DOMContentLoaded", function () {
     function updateCarrosselPosition() {
         const offset = -currentIndex * 100; // Cada item ocupa 100% da largura
         carrossel.style.transform = `translateX(${offset}%)`;
+
+        // Atualiza a classe ativa para o item atual
+        items.forEach(item => item.classList.remove("ativo"));
+        items[currentIndex].classList.add("ativo");
     }
 
-    // Adiciona eventos de clique aos botões
-    nextButton.addEventListener("click", nextSlide);
-    prevButton.addEventListener("click", prevSlide);
+    // Automatiza o avanço do carrossel a cada 2.5 segundos
+    let autoSlideInterval = setInterval(nextSlide, 2500); // 2500ms = 2.5 segundos
 
-    // Automatiza o avanço do carrossel a cada 3 segundos
-    setInterval(nextSlide, 2700); // 3000ms = 3 segundos
 });
