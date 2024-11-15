@@ -370,3 +370,36 @@ footer {
     color: var(--preto-basico);
 }
 
+/* Estilo para o botão de link no rodapé */
+.repositorio-btn {
+    display: inline-block;
+    padding: 15px 30px;
+    margin-top: 20px;
+    background-color: var(--fern-green);
+    color: var(--branco-basico);
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 30px;
+    text-align: center;
+    align-items: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.repositorio-btn:hover {
+    background-color: var(--hunter-green);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    transform: translateY(-5px);
+}
+
+.repositorio-btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.2);
+}
+
+.repositorio-btn:active {
+    transform: translateY(0);
+}
