@@ -1,4 +1,4 @@
-let index = 0; // Índice da imagem atual
+let index = 0; 
 
 function moverCarrossel(direcao) {
   const carrossel = document.querySelector('.carrossel');

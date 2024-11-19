@@ -240,7 +240,7 @@ footer {
 .carrossel-container {
     position: relative;
     width: 100%;
-    max-width: 800px; /* Controle o tamanho do carrossel */
+    max-width: 800px; 
     margin: 0 auto;
     overflow: hidden;
 }

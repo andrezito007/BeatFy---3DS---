@@ -20,12 +20,12 @@
 body {
     font-family: var(--fonte-principal), sans-serif;
     background-color: var(--sage);
-    color: var(--hunter-green); /* Mudando a cor do texto para branco */
+    color: var(--hunter-green); 
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center; /* Centralizando o conteúdo verticalmente */
-    min-height: 100vh; /* Garante que o conteúdo ocupe toda a altura da tela */
+    justify-content: center; 
+    min-height: 100vh;
 }
 
 
@@ -78,14 +78,14 @@ header {
 
 h1 {
     font-size: 3rem;
-    color: var(--branco-basico); /* Garantindo que o título esteja branco */
+    color: var(--branco-basico);
 }
 
 h4 {
     font-size: 3rem;
-    color: var(--hunter-green); /* Garantindo que o título esteja com a cor correta */
-    text-align: center; /* Centraliza o texto horizontalmente */
-    margin: 20px 0; /* Espaçamento acima e abaixo */
+    color: var(--hunter-green);
+    text-align: center; 
+    margin: 20px 0; 
 }
 
 
